@@ -77,8 +77,32 @@ class SiteController extends AdminController
 	}
 
 	public function actionIndex()
-	{ 
-            $this->render('index');
+	{
+            $data = array();
+            if(isset($_POST['a'])){
+                $a = $_POST['a'];
+                $b = $_POST['b'];
+                $sum = $a + $b;
+                $data['sum'] = $sum;
+            }
+            
+//            echo "<pre>";
+//            echo "Post Variable<br>";
+//            print_r($_POST['a']);
+//            echo "</pre>";
+//            
+//            echo "<pre>";
+//            echo "Get Variable<br>";
+//            print_r($_GET);
+//            echo "</pre>";
+//            die;
+            
+                                                                                                                            
+            $this->render('index', 
+                array(
+                    "data" => $data,
+                )
+            );
 	}
 
     /**

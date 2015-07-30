@@ -8,7 +8,8 @@ class UsersController extends AdminController
 
     public function actionCreate() {
         try {
-            $model = new Users('create');
+            
+            $model = new Users('createMember');
             $model->role_id = ROLE_MEMBER;
             if (isset($_POST['Users'])) {
                 $model->attributes = $_POST['Users'];

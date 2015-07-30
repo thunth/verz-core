@@ -30,9 +30,9 @@ echo $this->renderControlNav();
 	'email',
 	'full_name',
 	array(
-                        'name' => 'created_date',
-                        'type' => 'date',
-                    ),
+            'name' => 'created_date',
+            'type' => 'date',
+        ),
 	'gender',
 	'phone',
 		),
